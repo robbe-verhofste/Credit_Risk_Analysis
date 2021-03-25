@@ -22,13 +22,16 @@
 
 <!-- PROJECT LOGO -->
 
-Deliverable 1: Perform ETL on Amazon Product Reviews
+Deliverable 1: Use Resampling Models to Predict Credit Risk
 
-Deliverable 2: Determine Bias of Vine Reviews
+Deliverable 2: Use the SMOTEENN Algorithm to Predict Credit Risk
 
-Deliverable 3: A Written Report on the Analysis (README.md)
+Deliverable 3: Use Ensemble Classifiers to Predict Credit Risk
 
-<!-- TABLE OF CONTENTS -->
+Deliverable 4: A Written Report on the Credit Risk Analysis (README.md)
+
+<!-- 
+TABLE OF CONTENTS
 <details open="open">
   <summary>Table of Contents</summary>
   <ol>
@@ -49,76 +52,76 @@ Deliverable 3: A Written Report on the Analysis (README.md)
     <!-- <li><a href="#roadmap">Roadmap</a></li> -->
   </ol>
 </details>
-
+ -->
 
 
 <!-- ABOUT THE PROJECT -->
 ## Overview
+Assignment goals: 
+* Explain how a machine learning algorithm is used in data analytics.
+* Create training and test groups from a given data set.
+* Implement the logistic regression, decision tree, random forest, and support vector machine algorithms.
+* Interpret the results of the logistic regression, decision tree, random forest, and support vector machine algorithms.
+* Compare the advantages and disadvantages of each supervised learning algorithm.
+* Determine which supervised learning algorithm is best used for a given data set or scenario.
+* Use ensemble and resampling techniques to improve model performance.
 
-In this analysis we compared 5-star vine reviews (paid reviews) with non-vine reviews (unpaid) to determine whether paid reviews are proportionally more likely to be rated with 5-stars and, subsequently, whether paying for reviews is worth it.
 
 
-## Deliverable 1: Perform ETL on Amazon Product Reviews
+## Deliverable 1:
 
+RandomOverSampler and SMOTE algorithms, followed by the undersampling ClusterCentroids algorithm. We resampled the dataset, viewed the count of the target classes, trained a logistic regression classifier, calculated the balanced accuracy score, generated a confusion matrix, and generated a classification report.
 
-<!-- Overview of the analysis: Explain the purpose of this analysis.
+#### Outcomes
+* Calculated an accuracy score for the model
+* Generated a confusion matrix
+* Generated an imbalanced classification report
 
-Results: Using bulleted lists and images of DataFrames as support, address the following questions:
-
-How many Vine reviews and non-Vine reviews were there?
-How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
-What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
-Summary: In your summary, state if there is any positivity bias for reviews in the Vine program. Use the results of your analysis to support your statement. Then, provide one additional analysis that you could do with the dataset to support your statement. -->
-
-<!-- GETTING STARTED -->
 ### Overview:
 
-Using your knowledge of the cloud ETL process, you’ll create an AWS RDS database with tables in pgAdmin, pick a dataset from the Amazon Review datasets (Links to an external site.), and extract the dataset into a DataFrame. You'll transform the DataFrame into four separate DataFrames that match the table schema in pgAdmin. Then, you'll upload the transformed data into the appropriate tables and run queries in pgAdmin to confirm that the data has been uploaded.
-
-We completed the following learning objectives: 
-
-* Define big data and describe the challenges associated with it.
-* Define Hadoop and name the main elements of its ecosystem.
-* Explain how MapReduce processes data.
-* Define Spark and explain how it processes data.
-* Describe how NLP collects and analyzes text data.
-* Explain how to use AWS Simple Storage Service (S3) and relational databases for basic cloud storage.
-* Complete an analysis of an Amazon customer review.
 
 
 
-## Deliverable 2: Determine Bias of Vine Reviews
+
+## Deliverable 2: 
+
+We used imbalanced-learn and scikit-learn libraries, along with over and undersampling, with the SMOTEENN algorithm to determine whether the results from the combinatorial approach were better at predicting credit risk than the resampling algorithms from Deliverable 1.
+
+#### Outcomes:
+* Calculated an accuracy score for the model
+* Generated a confusion matrix
+* Generated an imbalanced classification report
 
 ### Analysis Details
 
-I ran this analysis for the "tools" section of Amazon.
+## Deliverable 3: 
 
-#### How many Vine reviews and non-Vine reviews were there?
-* There were 31,830 helpful reviews, and 14,777 helpful 5-star review ratings.
-#### How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
-* There were 163 paid, helpful 5-star reviews
-* There were 14,614 unpaid, helpful 5-star reviews
-#### What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
-* 57% of paid reviews were 5-star while 46% of unpaid reviws were 5-star, indicating a correlation between paid reviewers and high star ratings.
+We used imblearn.ensemble library to train BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model.
+
+#### Outcomes:
+BalanceRandomForestClassifier:
+
+* Calculated an accuracy score for the model
+* Generated a confusion matrix
+* Generated an imbalanced classification report
+* Sorted the features in descending order by feature importance
+EasyEnsembleClassifier:
+* Calculated an accuracy score for the model
+* Generated a confusion matrix
+* Generated an imbalanced classification report
+
+
+## Results:
+
 
 ## Summary:
 
-There is a clear positivity bias for vine reviews (57% vs. 46%). A further analysis I could run here would be to compare the average 1,2,3, and 4 star reviews between unpaid and paid reviews, to determine if the pattern is consistent or isolated to 5 star reviews only.
 
 
 
 
 ## Notes: 
 
-The below notes were taken directly from the Berkely Bootcamp Module:
-
-Four Vs of Big Data
-There are four characteristics of big data:
-
-* Volume refers to the size of data (e.g., terabytes of product information). For instance, a year's worth of stock market transactions is a large amount of data.
-* Velocity pertains to how quickly data comes in (customers across the world purchasing every second). As an example, McDonald's restaurants are worldwide with customers buying food at a constant rate, so the data comes in fast.
-* Variety relates to different forms of data (e.g., user account information, product details, etc.). Consider the breadth of Netflix user information, videos, photos for thumbnails, and so forth.
-* Veracity concerns the uncertainty of data (e.g., reviews might not be real and could come from bots). As an example, Netflix would want to verify whether users are actively watching the shows, falling asleep, or just playing them in the background.
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
