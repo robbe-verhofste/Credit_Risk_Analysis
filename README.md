@@ -72,6 +72,8 @@ Assignment goals:
 
 RandomOverSampler and SMOTE algorithms, followed by the undersampling ClusterCentroids algorithm. We resampled the dataset, viewed the count of the target classes, trained a logistic regression classifier, calculated the balanced accuracy score, generated a confusion matrix, and generated a classification report.
 
+The accuracy for both the SMOTE and RandomOverSampler were relatively low, at 0.63 and 0.66
+
 ![](resources/SMOTE.PNG)
 
 ![](resources/ROS.PNG)
@@ -93,6 +95,8 @@ RandomOverSampler and SMOTE algorithms, followed by the undersampling ClusterCen
 
 We used imbalanced-learn and scikit-learn libraries, along with over and undersampling, with the SMOTEENN algorithm to determine whether the results from the combinatorial approach were better at predicting credit risk than the resampling algorithms from Deliverable 1.
 
+The SMOTEENN and Undersampling Analysis had the lowest accuracy, at 51%
+
 ![](resources/Undersample.PNG)
 
 ![](resources/SMOTEENN.PNG)
@@ -108,8 +112,10 @@ We used imbalanced-learn and scikit-learn libraries, along with over and undersa
 
 We used imblearn.ensemble library to train BalancedRandomForestClassifier and EasyEnsembleClassifier, to predict credit risk and evaluate each model.
 
-![](resources/Balanced Random Forest.PNG)
-![](resources/confusion matrix ADA boost.PNG)
+The Balanced Random Forest had the highest accuracy, at 92%
+
+![](resources/BalancedRandomForest.PNG)
+![](resources/confusionmatrixADAboost.PNG)
 
 
 
