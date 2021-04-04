@@ -131,14 +131,9 @@ EasyEnsembleClassifier:
 * Generated a confusion matrix
 * Generated an imbalanced classification report
 
+## Summary
 
-# Results:
-
-
-# Summary:
-
-
-
+Each of these models had relatively low accuracy, with the Balanced Random Forest resulting in the highest accuracy. I would advise usage of this model as a preliminary step in assessing credit risk, but I would not advise using these without also considering other important factors and exploring the results with each person.
 
 
 ## Notes: 
